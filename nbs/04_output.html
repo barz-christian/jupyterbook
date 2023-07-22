@@ -307,7 +307,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-book-on-github">publish book on github</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-book-on-github-pages">publish book on github pages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-book-in-different-format">publish book in different format</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-github-actions">using github actions</a></li>
 </ul>
@@ -323,11 +323,12 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="publish-output">
 <h1>Publish output<a class="headerlink" href="#publish-output" title="Permalink to this headline">#</a></h1>
-<section id="publish-book-on-github">
-<h2>publish book on github<a class="headerlink" href="#publish-book-on-github" title="Permalink to this headline">#</a></h2>
+<section id="publish-book-on-github-pages">
+<h2>publish book on github pages<a class="headerlink" href="#publish-book-on-github-pages" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://jupyterbook.org/en/stable/publish/gh-pages.html">https://jupyterbook.org/en/stable/publish/gh-pages.html</a></p></li>
 </ul>
+<p>Goto: settings -&gt; pages -&gt; “deploy from a branch” and set branch to <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> with directory equals root</p>
 </section>
 <section id="publish-book-in-different-format">
 <h2>publish book in different format<a class="headerlink" href="#publish-book-in-different-format" title="Permalink to this headline">#</a></h2>
@@ -360,10 +361,10 @@ jobs:
     - uses: actions/checkout@v2
 
     # Install dependencies
-    - name: Set up Python 3.8
+    - name: Set up Python 3.10
       uses: actions/setup-python@v2
       with:
-        python-version: 3.8
+        python-version: 3.10
 
     - name: Install dependencies
       run: |
@@ -443,7 +444,7 @@ jobs:
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-book-on-github">publish book on github</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-book-on-github-pages">publish book on github pages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-book-in-different-format">publish book in different format</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-github-actions">using github actions</a></li>
 </ul>
