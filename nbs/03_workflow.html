@@ -338,17 +338,28 @@ document.write(`
 </pre></div>
 </div>
 <ol class="arabic simple">
-<li><p>render book
-<code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">build</span> <span class="pre">.</span></code></p></li>
-<li><p>push to  branch gh-pages
-<code class="docutils literal notranslate"><span class="pre">ghp-import</span> <span class="pre">-n</span> <span class="pre">-p</span> <span class="pre">-f</span> <span class="pre">_build/html</span></code></p></li>
+<li><p>render book</p></li>
 </ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jb</span> <span class="n">build</span> <span class="o">.</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>push to  branch gh-pages</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">f</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span>
+</pre></div>
+</div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="clean-book-generated-files">
 <h1>Clean book generated files<a class="headerlink" href="#clean-book-generated-files" title="Permalink to this headline">#</a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">clean</span> <span class="pre">mybook/</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">clean</span> <span class="n">mybook</span><span class="o">/</span>
+</pre></div>
+</div>
 <p>to delete <code class="docutils literal notranslate"><span class="pre">.jupyter_chache</span></code> too use</p>
-<p><code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">clean</span> <span class="pre">mybook/</span> <span class="pre">--all</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>jupyter-book clean mybook/ --all`
+``
+</pre></div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
