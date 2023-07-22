@@ -3,7 +3,7 @@
 
 title: A slim introduction to jupyter books
 author: Christian Barz
-logo: logo.png
+logo: newlogo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
