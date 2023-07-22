@@ -1,4 +1,4 @@
-# jupyterbook
+# Books with Jupyter book - A slim introduction
 
 Aim: Get quickly a minimal running jupyter book, such that one can concetrate on creating content and not reading manuals.
 
