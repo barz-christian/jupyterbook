@@ -2,8 +2,9 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
+root: nbs/intro
 chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+- file: nbs/01_content
+- file: nbs/02_1st_steps
+- file: nbs/03_workflow
+- file: nbs/04_output
