@@ -309,6 +309,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-book-on-github">publish book on github</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-book-in-different-format">publish book in different format</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-github-actions">using github actions</a></li>
 </ul>
             </nav>
         </div>
@@ -333,6 +334,54 @@ document.write(`
 <ul class="simple">
 <li><p><a class="reference external" href="https://jupyterbook.org/en/stable/basics/build.html">https://jupyterbook.org/en/stable/basics/build.html</a></p></li>
 </ul>
+</section>
+<section id="using-github-actions">
+<h2>using github actions<a class="headerlink" href="#using-github-actions" title="Permalink to this headline">#</a></h2>
+<p>copy and paste from <a class="reference external" href="https://jupyterbook.org/en/stable/publish/gh-pages.html">https://jupyterbook.org/en/stable/publish/gh-pages.html</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>name: deploy-book
+
+# Only run this when the master branch changes
+on:
+  push:
+    branches:
+    - master
+    # If your git repository has the Jupyter Book within some-subfolder next to
+    # unrelated files, you can make this run only if a file within that specific
+    # folder has been modified.
+    #
+    # paths:
+    # - some-subfolder/**
+
+# This job installs dependencies, builds the book, and pushes it to `gh-pages`
+jobs:
+  deploy-book:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    # Install dependencies
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    # Build the book
+    - name: Build the book
+      run: |
+        jupyter-book build .
+
+    # Push the book&#39;s HTML to github-pages
+    - name: GitHub Pages action
+      uses: peaceiris/actions-gh-pages@v3.6.1
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./_build/html
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -396,6 +445,7 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-book-on-github">publish book on github</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publish-book-in-different-format">publish book in different format</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-github-actions">using github actions</a></li>
 </ul>
   </nav></div>
 
