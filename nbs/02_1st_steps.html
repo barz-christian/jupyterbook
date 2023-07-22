@@ -309,25 +309,25 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-conda-enviroment">create conda enviroment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-enviroment">Conda enviroment</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git-stuff">“git-stuff”</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#st-steps-create-book">1st steps create book</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-book-template-and-test-setup">create book template and test setup</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#housekeeping">housekeeping</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-book-template-and-test-setup">Create book template and test setup</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#housekeeping">Housekeeping</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#start-page-intro-md">Start page <code class="docutils literal notranslate"><span class="pre">intro.md</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#st-content-page">1st content page</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-content-toc-yml">Table of content <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#config-yml"><code class="docutils literal notranslate"><span class="pre">_config.yml</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#example">example</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#config-config-yml">Config <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#book-logo">Book logo</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#book-logo">book logo</a></li>
 </ul>
             </nav>
         </div>
@@ -349,8 +349,8 @@ document.write(`
 <li><p>like to use <a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html">jupyter lab</a> as UI, otherwuse change code below accordingly</p></li>
 <li><p>want to publish the book on github pages using <a class="reference external" href="https://github.com/c-w/ghp-import">ghp-import</a></p></li>
 </ul>
-<section id="create-conda-enviroment">
-<h3>create conda enviroment<a class="headerlink" href="#create-conda-enviroment" title="Permalink to this headline">#</a></h3>
+<section id="conda-enviroment">
+<h3>Conda enviroment<a class="headerlink" href="#conda-enviroment" title="Permalink to this headline">#</a></h3>
 <p>use the following code in the conda prompt</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">jupyterbook</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.10</span>
 <span class="n">conda</span> <span class="n">activate</span> <span class="n">jupyterbook</span>
@@ -375,7 +375,7 @@ document.write(`
 <li><p><a class="reference external" href="https://jupyterbook.org/en/stable/start/create.html">https://jupyterbook.org/en/stable/start/create.html</a></p></li>
 </ul>
 <section id="create-book-template-and-test-setup">
-<h3>create book template and test setup<a class="headerlink" href="#create-book-template-and-test-setup" title="Permalink to this headline">#</a></h3>
+<h3>Create book template and test setup<a class="headerlink" href="#create-book-template-and-test-setup" title="Permalink to this headline">#</a></h3>
 <p>Create a template book using the following code in the conda prompt</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">create</span> <span class="n">mybook</span><span class="o">/</span>
 </pre></div>
@@ -387,8 +387,8 @@ document.write(`
 <p>check <code class="docutils literal notranslate"><span class="pre">index.html</span></code> in <code class="docutils literal notranslate"><span class="pre">_build/html/</span></code></p>
 </section>
 <section id="housekeeping">
-<h3>housekeeping<a class="headerlink" href="#housekeeping" title="Permalink to this headline">#</a></h3>
-<p>because <code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">build</span> <span class="pre">mybook/</span></code> created a template lets replace the defaults w.r.t. our needs</p>
+<h3>Housekeeping<a class="headerlink" href="#housekeeping" title="Permalink to this headline">#</a></h3>
+<p>Because <code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">build</span> <span class="pre">mybook/</span></code> created a template lets replace the defaults w.r.t. our needs</p>
 <ol class="arabic simple">
 <li><p>create folder for content files (notebooks, markdown,…), e.g. <code class="docutils literal notranslate"><span class="pre">ǹbs</span></code></p></li>
 <li><p>move <code class="docutils literal notranslate"><span class="pre">intro.md</span></code> to folder <code class="docutils literal notranslate"><span class="pre">nbs</span></code></p></li>
@@ -412,7 +412,7 @@ document.write(`
 </section>
 <section id="st-content-page">
 <h3>1st content page<a class="headerlink" href="#st-content-page" title="Permalink to this headline">#</a></h3>
-<p>simply create a first content page, e.g. <code class="docutils literal notranslate"><span class="pre">01_content.ipynb</span></code></p>
+<p>We simply create a first content page, e.g. <code class="docutils literal notranslate"><span class="pre">01_content.ipynb</span></code></p>
 <section id="table-of-content-toc-yml">
 <h4>Table of content <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code><a class="headerlink" href="#table-of-content-toc-yml" title="Permalink to this headline">#</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> tells which files and in which order files become part of the book, e.g.:</p>
@@ -427,9 +427,9 @@ document.write(`
 </div>
 <p>or more information see <a class="reference external" href="https://jupyterbook.org/en/stable/structure/toc.html">TOC-Doc</a>.</p>
 </section>
-<section id="config-yml">
-<h4><code class="docutils literal notranslate"><span class="pre">_config.yml</span></code><a class="headerlink" href="#config-yml" title="Permalink to this headline">#</a></h4>
-<p>define book settings, for more see <a class="reference external" href="https://jupyterbook.org/en/stable/customize/config.html">Configuration reference</a></p>
+<section id="config-config-yml">
+<h4>Config <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code><a class="headerlink" href="#config-config-yml" title="Permalink to this headline">#</a></h4>
+<p>We define book settings, for more details see <a class="reference external" href="https://jupyterbook.org/en/stable/customize/config.html">Configuration reference</a></p>
 <ol class="arabic simple">
 <li><p>adjust title</p></li>
 <li><p>name author</p></li>
@@ -437,7 +437,7 @@ document.write(`
 <li><p>set repository location</p></li>
 </ol>
 <section id="example">
-<h5>example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h5>
+<h5>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h5>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Book settings</span>
 <span class="c1"># Learn more at https://jupyterbook.org/customize/config.html</span>
 
@@ -464,11 +464,11 @@ document.write(`
 </section>
 </section>
 </section>
-</section>
 <section id="book-logo">
-<h2>book logo<a class="headerlink" href="#book-logo" title="Permalink to this headline">#</a></h2>
+<h3>Book logo<a class="headerlink" href="#book-logo" title="Permalink to this headline">#</a></h3>
 <p>You can find many public domain photos, e.g. <a class="reference external" href="https://www.pexels.com">https://www.pexels.com</a>. my one is from <a class="reference external" href="https://www.pexels.com/&#64;rikka/">rikka ameboshi</a></p>
 <p>Simply put the file into the book folder and adjust the <code class="docutils literal notranslate"><span class="pre">logo:</span></code> in <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>.</p>
+</section>
 </section>
 </section>
 
@@ -540,25 +540,25 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-conda-enviroment">create conda enviroment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-enviroment">Conda enviroment</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git-stuff">“git-stuff”</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#st-steps-create-book">1st steps create book</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-book-template-and-test-setup">create book template and test setup</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#housekeeping">housekeeping</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-book-template-and-test-setup">Create book template and test setup</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#housekeeping">Housekeeping</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#start-page-intro-md">Start page <code class="docutils literal notranslate"><span class="pre">intro.md</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#st-content-page">1st content page</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-content-toc-yml">Table of content <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#config-yml"><code class="docutils literal notranslate"><span class="pre">_config.yml</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#example">example</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#config-config-yml">Config <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#book-logo">Book logo</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#book-logo">book logo</a></li>
 </ul>
   </nav></div>
 
